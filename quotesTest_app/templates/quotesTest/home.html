@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Quotes from famous people</h1>
+        {% block content %}
+            {% for quote in quote_list %}
+                <p><strong>{{ quote.author_name }} {{ quote.authorLast_name }}</strong></p>
+                <p>{{ quote.quote_full }}</p>
+                <hr>
+            {% endfor %}
+        {% endblock %}
+</body>
+</html>
